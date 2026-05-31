@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Biodata Saya</title>
 
     <style>
 
         body {
             margin: 0;
-            background-image: url("Sky 2.jpg");
+            background-image: url("sky-2.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             font-family: Arial, sans-serif;
-            padding-top: 70px;
+            padding-top: 80px;
         }
 
-        
+        /* NAVBAR */
         .navbar {
             background-color: black;
-            text-align: center;
-            padding: 15px;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            padding: 10px 0;
         }
 
-        .navbar a {
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .navbar ul li a {
+            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 20px;
-            padding: 8px 15px;
+            padding: 10px 18px;
+            border: 1px solid white;
+            border-radius: 6px;
             transition: 0.3s;
-            border-radius: 8px;
         }
 
-        .navbar a:hover {
+        .navbar ul li a:hover {
             background-color: white;
             color: black;
         }
@@ -54,22 +68,25 @@
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.4);
             color: white;
-
-            
-            box-shadow: 0 0 15px rgba(255,255,255,0.3);
         }
 
+        /* 🔥 FIX WELCOME TEXT (INI PENTING) */
         .badge-box h2 {
-            margin: 0;
+            color: #ffffff;
+            font-weight: bold;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+            margin: 0;
         }
 
         .badge-box p {
-            margin-top: 5px;
+            color: #ffffff;
             font-size: 14px;
+            margin-top: 5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
         }
 
-       
+        /* MAIN BOX */
         .box {
             display: flex;
             margin: 40px;
@@ -80,7 +97,6 @@
             align-items: center;
         }
 
-      
         .left {
             width: 60%;
         }
@@ -88,10 +104,6 @@
         .left h1 {
             font-size: 42px;
             margin-bottom: 10px;
-
-          
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
         .left p {
@@ -99,7 +111,6 @@
             font-size: 18px;
         }
 
-      
         .btn {
             display: inline-block;
             margin-top: 20px;
@@ -109,16 +120,14 @@
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
         .btn:hover {
             background: black;
             color: white;
-            border: 2px solid white;
+            border: 1px solid white;
         }
 
-      
         .right {
             width: 40%;
             text-align: center;
@@ -130,14 +139,9 @@
             border-radius: 50%;
             border: 6px solid white;
             object-fit: cover;
-            transition: 0.3s;
         }
 
-        .right img:hover {
-            transform: scale(1.05);
-        }
-
-        
+        /* INFO SECTION */
         .info-section {
             display: flex;
             justify-content: center;
@@ -153,23 +157,13 @@
             padding: 25px;
             border-radius: 20px;
             text-align: center;
-            transition: 0.3s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-8px);
         }
 
         .info-card h3 {
-            margin-top: 0;
             color: #D8C3A5;
         }
 
-        .info-card p {
-            line-height: 1.6;
-        }
-
-        
+        /* QUICK LINKS */
         .quick {
             text-align: center;
             margin-top: 20px;
@@ -183,7 +177,6 @@
             color: white;
             text-decoration: none;
             border-radius: 10px;
-            transition: 0.3s;
             border: 1px solid white;
         }
 
@@ -192,40 +185,36 @@
             color: black;
         }
 
-       
-        .footer {
+        /* FOOTER */
+        footer {
             background-color: black;
             color: white;
             text-align: center;
             padding: 15px;
             margin-top: 40px;
             border-top: 3px solid white;
-            font-size: 14px;
         }
 
-      
+        /* RESPONSIVE */
         @media screen and (max-width:768px) {
 
             .box {
                 flex-direction: column;
                 text-align: center;
-                padding: 25px;
             }
 
-            .left,
-            .right {
+            .left, .right {
                 width: 100%;
             }
 
             .right img {
                 width: 220px;
                 height: 220px;
-                margin-top: 20px;
             }
 
-            .navbar a {
-                margin: 8px;
-                display: inline-block;
+            .navbar ul li {
+                display: block;
+                margin: 6px 0;
             }
         }
 
@@ -234,78 +223,79 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills & Experience</a>
-        <a href="contact.html">Contact</a>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills & Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BADGE -->
+<section class="badge">
+    <div class="badge-box">
+        <h2>WELCOME TO MY WEBSITE 👋</h2>
+        <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="box">
+
+    <section class="left">
+
+        <h1>ASSALAMUALAIKUM HI 👋</h1>
+
+        <p>Welcome to my personal website.</p>
+
+        <p>
+            I am a Technician currently working at SIRIM Berhad, with experience in managing and maintaining security and communication systems. My responsibilities include handling CCTV systems, access control doors, barrier gates, and providing technical support for events that require audio-visual equipment and meeting room systems. I am a responsible, dedicated, and detail-oriented individual with strong troubleshooting and technical support skills. I am passionate about technology and continuously strive to enhance my knowledge and expertise to deliver efficient and reliable solutions.
+        </p>
+
+        <a href="about.html" class="btn">Explore More</a>
+
+        <div class="quick">
+            <a href="mailto:afiqd6663@gmail.com">Email Me</a>
+            <a href="https://wa.me/601137589041" target="_blank">WhatsApp</a>
+        </div>
+
+    </section>
+
+    <section class="right">
+        <img src="raya.jpeg" alt="Profile Image">
+    </section>
+
+</main>
+
+<!-- INFO -->
+<section class="info-section">
+
+    <div class="info-card">
+        <h3>🎓 Education</h3>
+        <p>IT student at UiTM.</p>
     </div>
 
-    <!-- HOME BADGE -->
-    <div class="badge">
-        <div class="badge-box">
-            <h2>WELCOME TO MY WEBSITE 👋</h2>
-            <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
-        </div>
+    <div class="info-card">
+        <h3>💼 Experience</h3>
+        <p>CCTV & technical systems support.</p>
     </div>
 
-    <!-- HOME CONTENT -->
-    <div class="box">
-
-        <div class="left">
-
-            <h1>ASSALAMUALAIKUM HI 👋</h1>
-
-            <p>
-                Welcome to my personal website.
-            </p>
-
-            <p>
-               I am a Technician currently working at SIRIM Berhad, with experience in managing and maintaining security and communication systems. My responsibilities include handling CCTV systems, access control doors, barrier gates, and providing technical support for events that require audio-visual equipment and meeting room systems. I am a responsible, dedicated, and detail-oriented individual with strong troubleshooting and technical support skills. I am passionate about technology and continuously strive to enhance my knowledge and expertise to deliver efficient and reliable solutions.
-            </p>
-
-            <a href="about.html" class="btn">Explore More</a>
-
-            <!-- QUICK CONTACT -->
-            <div class="quick">
-                <a href="mailto:afiqd6663@gmail.com">Email Me</a>
-                <a href="https://wa.me/601137589041" target="_blank">WhatsApp</a>
-            </div>
-
-        </div>
-
-        <div class="right">
-            <img src="Raya.jpeg" alt="Raya">
-        </div>
-
+    <div class="info-card">
+        <h3>📍 About Me</h3>
+        <p>Passionate about technology and learning.</p>
     </div>
 
-    <!-- INFO CARD -->
-    <div class="info-section">
+</section>
 
-        <div class="info-card">
-            <h3>🎓 Education</h3>
-            <p>Diploma student in IT & systems.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>💼 Experience</h3>
-            <p>CCTV, access control & technical support.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>📍 About Me</h3>
-            <p>Passionate about learning new tech skills.</p>
-        </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-        Afiq Danial's Portfolio Pages - Powered by GitHub
-    </div>
+<!-- FOOTER -->
+<footer>
+    Afiq Danial Portfolio Website © 2026
+</footer>
 
 </body>
 </html>

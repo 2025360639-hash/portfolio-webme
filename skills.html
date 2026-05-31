@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills & Experience</title>
 
     <style>
 
         body {
             margin: 0;
-            background-image: url("Sky 2.jpg");
+            background-image: url("sky-2.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -15,33 +17,45 @@
             padding-top: 80px;
         }
 
-       
+        /* NAVBAR */
         .navbar {
             background-color: black;
-            text-align: center;
-            padding: 15px;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            padding: 10px 0;
         }
 
-        .navbar a {
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .navbar ul li a {
+            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 20px;
-            padding: 8px 15px;
+            padding: 10px 18px;
+            border: 1px solid white;
+            border-radius: 6px;
             transition: 0.3s;
-            border-radius: 8px;
         }
 
-        .navbar a:hover {
+        .navbar ul li a:hover {
             background-color: white;
             color: black;
         }
 
-        
-        .skills-header {
+        /* HEADER */
+        header {
             background-color: black;
             margin: 5px 40px;
             border-radius: 20px;
@@ -55,27 +69,28 @@
             gap: 20px;
         }
 
-        .profile-side img {
+        .header-content img {
             width: 90px;
             height: 90px;
             border-radius: 50%;
             border: 3px solid white;
+            object-fit: cover;
         }
 
-        .skills-text h1 {
+        .header-text h1 {
             color: white;
             margin: 0;
             font-size: 28px;
         }
 
-        .skills-text p {
+        .header-text p {
             color: white;
-            margin: 5px 0 0;
+            margin-top: 5px;
             font-size: 14px;
         }
 
-       
-        .box {
+        /* MAIN */
+        main {
             margin: 40px;
             padding: 35px;
             background-color: rgba(0,0,0,0.6);
@@ -89,7 +104,7 @@
             padding-bottom: 8px;
         }
 
-      
+        /* SKILLS */
         .skill {
             margin-bottom: 20px;
         }
@@ -112,7 +127,7 @@
             font-weight: bold;
         }
 
-       
+        /* EXPERIENCE */
         .exp-box {
             background: rgba(255,255,255,0.12);
             padding: 20px;
@@ -121,7 +136,6 @@
             border-radius: 15px;
         }
 
-        
         .extra-box {
             margin-top: 25px;
             padding: 15px;
@@ -130,12 +144,7 @@
             border-left: 5px solid #D8C3A5;
         }
 
-        .extra-box p {
-            margin: 5px 0;
-            line-height: 1.6;
-        }
-
-        
+        /* GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -158,14 +167,8 @@
             border: 2px solid white;
         }
 
-        .gallery-box p {
-            color: white;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        
-        .footer {
+        /* FOOTER */
+        footer {
             background-color: black;
             color: white;
             text-align: center;
@@ -174,41 +177,57 @@
             border-top: 3px solid white;
         }
 
+        /* RESPONSIVE */
+        @media screen and (max-width:768px) {
+
+            .navbar ul li {
+                display: block;
+                margin: 6px 0;
+            }
+
+            main {
+                margin: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills & Experience</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills & Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- HEADER -->
-    <div class="skills-header">
-
-        <div class="header-content">
-
-            <div class="profile-side">
-                <img src="Raya.jpeg">
-            </div>
-
-            <div class="skills-text">
-                <h1>Skills & Experience</h1>
-                <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
-            </div>
-
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <img src="raya.jpeg" alt="Profile Image">
+        <div class="header-text">
+            <h1>Skills & Experience</h1>
+            <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
         </div>
-
     </div>
+</header>
 
-    <!-- CONTENT -->
-    <div class="box">
+<!-- MAIN -->
+<main>
 
+    <section>
         <h2>Technical Skills</h2>
 
         <div class="skill">
@@ -226,63 +245,65 @@
             <div class="bar"><div class="progress" style="width:75%">75%</div></div>
         </div>
 
-        <!-- NEW SKILL -->
         <div class="skill">
             <p>Audio Visual System</p>
             <div class="bar"><div class="progress" style="width:70%">70%</div></div>
         </div>
+    </section>
 
+    <section>
         <h2>Experience</h2>
 
         <div class="exp-box">
             <h3>Technician - SIRIM Berhad</h3>
             <p>
-                Handling CCTV installation, access control system,
-                barrier gate maintenance, technical troubleshooting,
-                and audio visual support for meetings and events.
+                Handling CCTV, access control, barrier gate maintenance,
+                troubleshooting, and AV system support.
             </p>
         </div>
 
-        <!-- NEW EXTRA SECTION -->
         <div class="extra-box">
             <h3>Additional Responsibility</h3>
-            <p>✔ Support event setup (projector, sound system)</p>
-            <p>✔ Troubleshooting technical issue on-site</p>
-            <p>✔ Maintenance of security system infrastructure</p>
+            <p>✔ Event setup (projector, sound system)</p>
+            <p>✔ On-site troubleshooting</p>
+            <p>✔ Security system maintenance</p>
         </div>
+    </section>
 
+    <section>
         <h2>My Work Gallery</h2>
 
         <div class="gallery">
 
             <div class="gallery-box">
-                <img src="kerja 1.jpeg">
+                <img src="kerja 1.jpeg" alt="Work 1">
                 <p>Meeting setup</p>
             </div>
 
             <div class="gallery-box">
-                <img src="kerja 2.jpeg">
-                <p>Access Control Setup</p>
+                <img src="kerja 2.jpeg" alt="Work 2">
+                <p>Access Control</p>
             </div>
 
             <div class="gallery-box">
-                <img src="kerja 3.jpeg">
-                <p>Audio Visual / Event Setup</p>
+                <img src="kerja 3.jpeg" alt="Work 3">
+                <p>AV System</p>
             </div>
 
             <div class="gallery-box">
-                <img src="kerja 4.jpeg">
-                <p>Barrier Gate Maintenance</p>
+                <img src="kerja 4.jpeg" alt="Work 4">
+                <p>Maintenance</p>
             </div>
 
         </div>
+    </section>
 
-    </div>
+</main>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        Afiq Danial's Portfolio Pages - Powered by GitHub
-    </div>
+<!-- FOOTER -->
+<footer>
+    Afiq Danial Portfolio Website © 2026
+</footer>
 
 </body>
 </html>

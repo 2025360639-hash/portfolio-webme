@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Biodata Saya</title>
 
     <style>
 
         body {
             margin: 0;
-            background-image: url("Sky 2.jpg");
+            background-image: url("sky-2.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -18,30 +20,42 @@
         /* NAVBAR */
         .navbar {
             background-color: black;
-            text-align: center;
-            padding: 15px;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            padding: 10px 0;
         }
 
-        .navbar a {
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .navbar ul li a {
+            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 20px;
-            padding: 8px 15px;
+            padding: 10px 18px;
+            border: 1px solid white;
+            border-radius: 6px;
             transition: 0.3s;
-            border-radius: 8px;
         }
 
-        .navbar a:hover {
+        .navbar ul li a:hover {
             background-color: white;
             color: black;
         }
 
-       
-        .edu-header {
+        /* HEADER */
+        header {
             background-color: black;
             margin: 5px 40px;
             border-radius: 20px;
@@ -55,29 +69,29 @@
             gap: 20px;
         }
 
-        .profile-side img {
+        .header-content img {
             width: 90px;
             height: 90px;
-            object-fit: cover;
             border-radius: 50%;
             border: 3px solid white;
+            object-fit: cover;
         }
 
-        .edu-text h1 {
+        .header-text h1 {
             color: white;
             margin: 0;
             font-size: 28px;
         }
 
-        .edu-text p {
+        .header-text p {
             color: white;
             margin-top: 5px;
             font-size: 14px;
             text-align: center;
         }
 
-        
-        .box {
+        /* MAIN BOX */
+        main {
             margin: 40px;
             padding: 40px;
             background-color: rgba(0,0,0,0.6);
@@ -85,19 +99,7 @@
             color: white;
         }
 
-        /* TITLE */
-        .title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .title h2 {
-            color: #D8C3A5;
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
-
-        
+        /* INFO CARDS */
         .info-section {
             display: flex;
             justify-content: center;
@@ -112,18 +114,19 @@
             border-radius: 20px;
             padding: 20px;
             text-align: center;
-            transition: 0.3s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
         }
 
         .info-card h3 {
             color: #D8C3A5;
         }
 
-       
+        /* TITLE */
+        h2 {
+            text-align: center;
+            color: #D8C3A5;
+        }
+
+        /* TIMELINE */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -185,13 +188,7 @@
             color: #D8C3A5;
         }
 
-       
-        .gallery-title {
-            text-align: center;
-            margin-top: 50px;
-            color: #D8C3A5;
-        }
-
+        /* GALLERY */
         .gallery {
             display: flex;
             justify-content: center;
@@ -213,8 +210,8 @@
             transform: scale(1.05);
         }
 
-       
-        .footer {
+        /* FOOTER */
+        footer {
             background-color: black;
             color: white;
             text-align: center;
@@ -223,7 +220,7 @@
             border-top: 3px solid white;
         }
 
-        
+        /* RESPONSIVE */
         @media screen and (max-width:768px) {
 
             .header-content {
@@ -245,6 +242,11 @@
                 left: 10px;
             }
 
+            .navbar ul li {
+                display: block;
+                margin: 6px 0;
+            }
+
             .gallery img {
                 width: 100%;
                 max-width: 300px;
@@ -256,117 +258,114 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills & Experience</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills & Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- MAIN -->
+<main>
 
     <!-- HEADER -->
-    <div class="edu-header">
-        <div class="header-content">
-            <div class="profile-side">
-                <img src="Raya.jpeg">
-            </div>
-            <div class="edu-text">
-                <h1>Education</h1>
-                <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
-            </div>
+    <section class="header-content">
+        <img src="raya.jpeg" alt="Profile Image">
+        <div class="header-text">
+            <h1>Education</h1>
+            <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
         </div>
-    </div>
+    </section>
 
-    <!-- CONTENT -->
-    <div class="box">
+    <!-- INFO -->
+    <section class="info-section">
 
-        <!-- INFO CARD -->
-        <div class="info-section">
-
-            <div class="info-card">
-                <h3>🎓 Current Study</h3>
-                <p>Degree at UiTM Puncak Perdana</p>
-            </div>
-
-            <div class="info-card">
-                <h3>📚 Level</h3>
-                <p>Primary → Secondary → SVM → DVM → Degree</p>
-            </div>
-
-            <div class="info-card">
-                <h3>🏫 Institution</h3>
-                <p>SK → SMK → KV Bachok → UiTM</p>
-            </div>
-
+        <div class="info-card">
+            <h3>🎓 Current Study</h3>
+            <p>Degree at UiTM</p>
         </div>
 
-        <div class="title">
-            <h2>My Education Journey 🎓</h2>
+        <div class="info-card">
+            <h3>📚 Education Path</h3>
+            <p>SK → SMK → KV → UiTM</p>
         </div>
 
-        <!-- TIMELINE -->
-        <div class="timeline">
-
-            <div class="container left">
-                <div class="content">
-                    <div class="year">2008 - 2013</div>
-                    <h3>Primary School</h3>
-                    <p>Sekolah Kebangsaan Taman Seri Muda</p>
-                </div>
-            </div>
-
-            <div class="container right">
-                <div class="content">
-                    <div class="year">2014 - 2016</div>
-                    <h3>Secondary School</h3>
-                    <p>Sekolah Menengah Kebangsaan Seksyen 19</p>
-                </div>
-            </div>
-
-            <div class="container left">
-                <div class="content">
-                    <div class="year">2017 - 2018</div>
-                    <h3>SVM</h3>
-                    <p>Kolej Vokasional Bachok</p>
-                </div>
-            </div>
-
-            <div class="container right">
-                <div class="content">
-                    <div class="year">2019 - 2021</div>
-                    <h3>DVM</h3>
-                    <p>Kolej Vokasional Bachok</p>
-                </div>
-            </div>
-
-            <div class="container left">
-                <div class="content">
-                    <div class="year">2025 - Present</div>
-                    <h3>Degree</h3>
-                    <p>Bachelor of Information Science (Hons.) Information Systems Management<br>
-                    UiTM Puncak Perdana</p>
-                </div>
-            </div>
-
+        <div class="info-card">
+            <h3>🏫 Institution</h3>
+            <p>UiTM Puncak Perdana</p>
         </div>
 
-        <!-- GALLERY -->
-        <h2 class="gallery-title">Education Gallery 📸</h2>
+    </section>
 
-        <div class="gallery">
-            <img src="Konvo 1.jpeg">
-            <img src="PRS 1.jpeg">
-            <img src="Oren kv.jpeg">
-            <img src="award 1.jpeg">
+    <h2>My Education Journey 🎓</h2>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+
+        <div class="container left">
+            <div class="content">
+                <div class="year">2008 - 2013</div>
+                <h3>Primary School</h3>
+                <p>SK Taman Seri Muda</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <div class="year">2014 - 2016</div>
+                <h3>Secondary School</h3>
+                <p>SMK Seksyen 19</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <div class="year">2017 - 2018</div>
+                <h3>SVM</h3>
+                <p>Kolej Vokasional Bachok</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <div class="year">2019 - 2021</div>
+                <h3>DVM</h3>
+                <p>Kolej Vokasional Bachok</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <div class="year">2025 - Present</div>
+                <h3>Degree</h3>
+                <p>UiTM Puncak Perdana</p>
+            </div>
         </div>
 
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        Afiq Danial's Portfolio Pages - Powered by GitHub
+    <!-- GALLERY -->
+    <h2>Education Gallery 📸</h2>
+
+    <div class="gallery">
+        <img src="konvo 1.jpeg" alt="Convocation">
+        <img src="PRS 1.jpeg" alt="Activity">
+        <img src="Oren kv.jpeg" alt="KV Bachok">
+        <img src="award 1.jpeg" alt="Award">
     </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    Afiq Danial Portfolio Website © 2026
+</footer>
 
 </body>
 </html>
