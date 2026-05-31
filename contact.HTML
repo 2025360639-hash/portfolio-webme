@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Biodata Saya</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background-image: url("Sky 2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            padding-top: 80px;
+        }
+
+      
+        .navbar {
+            background-color: black;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+
+        
+        .contact-header {
+            background-color: black;
+            margin: 5px 40px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-side img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .contact-text h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .contact-text p {
+            color: white;
+            margin: 5px 0 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        
+        .box {
+            margin: 80px 40px 40px 40px;
+            padding: 35px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 20px;
+            color: white;
+        }
+
+       
+        .info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        
+        .form-box {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .form-box textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-box button:hover {
+            background-color: white;
+            color: black;
+        }
+
+       
+        .feedback-box {
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.12);
+            border-left: 5px solid white;
+        }
+
+        .feedback-box h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .feedback-box select,
+        .feedback-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .feedback-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .feedback-box button:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+       
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            border-top: 3px solid white;
+            font-size: 14px;
+        }
+
+       
+        @media screen and (max-width:768px) {
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-side img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .contact-text h1 {
+                font-size: 20px;
+            }
+
+            .contact-text p {
+                font-size: 13px;
+            }
+
+            .box {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .navbar a {
+                margin: 8px;
+                display: inline-block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills & Experience</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="contact-header">
+
+        <div class="header-content">
+
+            <div class="profile-side">
+                <img src="Raya.jpeg" alt="Raya">
+            </div>
+
+            <div class="contact-text">
+                <h1>Contact</h1>
+                <p>MOHD AFIQ DANIAL BIN ABDUL HALIM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="box">
+
+        <div class="info">
+
+            <p>📞 Phone: 011-37589041</p>
+
+            <!-- FIXED GMAIL (WORKING 100%) -->
+            <p>
+                📧 Email:
+                <a href="mailto:afiqd6663@gmail.com?subject=Contact%20from%20Website&body=Hi%20Afiq,%20I%20want%20to%20contact%20you."
+                   style="color:#00d9ff; text-decoration:none; font-weight:bold;">
+                   Send Email
+                </a>
+            </p>
+
+            <p>📍 Location: Malaysia</p>
+
+        </div>
+
+        <!-- FORM -->
+        <div class="form-box">
+
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+
+            <button>Send Message</button>
+
+        </div>
+
+        <!-- FEEDBACK (GOOGLE FORM LINK READY) -->
+        <div class="feedback-box">
+
+            <h2>Feedback</h2>
+
+            <select>
+                <option>⭐ Rate My Website</option>
+                <option>⭐⭐ Good</option>
+                <option>⭐⭐⭐ Very Good</option>
+                <option>⭐⭐⭐⭐ Excellent</option>
+                <option>⭐⭐⭐⭐⭐ Outstanding</option>
+            </select>
+
+            <textarea placeholder="Write your feedback here..."></textarea>
+
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScY3GzSlV26fWoZwc5i6BgGj-ukXofJmXPO6fDmgCJUpt4iPw/viewform?usp=header')">
+                Submit Feedback
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Afiq Danial's Portfolio Pages - Powered by GitHub
+    </div>
+
+</body>
+</html>
